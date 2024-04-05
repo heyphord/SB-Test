@@ -34,24 +34,7 @@ Resilience4J SPRING CLOUD CIRCUIT BREAKER
 Spring Cloud Circuit breaker with Resilience4j as the underlying implementation.
 
 # PROJECT FOLDER STRUCTURE
-
-├── src
-│   ├── controller
-│   │   ├── **/*.css
-│   ├── views
-│   ├── model
-│   ├── index.js
-├── public
-│   ├── css
-│   │   ├── **/*.css
-│   ├── images
-│   ├── js
-│   ├── index.html
-├── dist (or build
-├── node_modules
-├── package.json
-├── package-lock.json
-└── .gitignore
+```md
 
 demo-microservice/
 │
@@ -85,32 +68,6 @@ demo-microservice/
 │   │   │   │   │
 │   │   │   │   │
 │   │   │   │   └── ...
-│   │   │   │   │
-│   │   │   │   ├── infrastructure/                        # Infrastructure layer
-│   │   │   │   │   ├── adapter/                           # Adapters for external interfaces
-│   │   │   │   │   │   ├── api/                           # API adapters
-│   │   │   │   │   │   │   ├── RestAccountController.java
-│   │   │   │   │   │   │   ├── RestTransactionController.java
-│   │   │   │   │   │   │   └── ...
-│   │   │   │   │   │   │
-│   │   │   │   │   │   ├── persistence/                   # Persistence adapters
-│   │   │   │   │   │   │   ├── JpaAccountRepository.java
-│   │   │   │   │   │   │   ├── JpaTransactionRepository.java
-│   │   │   │   │   │   │   └── ...
-│   │   │   │   │   │   │
-│   │   │   │   │   │   └── ...
-│   │   │   │   │   │
-│   │   │   │   │   ├── config/                            # Configuration classes
-│   │   │   │   │   │   ├── AwsConfig.java
-│   │   │   │   │   │   └── ...
-│   │   │   │   │   │
-│   │   │   │   │   ├── exception/                         # Exception handling
-│   │   │   │   │   │   ├── ApiExceptionHandler.java
-│   │   │   │   │   │   └── ...
-│   │   │   │   │   │
-│   │   │   │   │   └── ...
-│   │   │   │   │
-│   │   │   │   └── ...
 │   │   │   │
 │   │   │   └── ...
 │   │   │
@@ -131,3 +88,6 @@ demo-microservice/
 ├── config/                  # Configuration files (e.g., Spring Boot, AWS)
 │   ├── application.yml
 │   └── aws-config.yml
+
+
+```
