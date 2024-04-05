@@ -35,6 +35,24 @@ Spring Cloud Circuit breaker with Resilience4j as the underlying implementation.
 
 # PROJECT FOLDER STRUCTURE
 
+├── src
+│   ├── controller
+│   │   ├── **/*.css
+│   ├── views
+│   ├── model
+│   ├── index.js
+├── public
+│   ├── css
+│   │   ├── **/*.css
+│   ├── images
+│   ├── js
+│   ├── index.html
+├── dist (or build
+├── node_modules
+├── package.json
+├── package-lock.json
+└── .gitignore
+
 demo-microservice/
 │
 │
@@ -68,7 +86,7 @@ demo-microservice/
 │   │   │   │   │
 │   │   │   │   └── ...
 │   │   │   │   │
-│   │   │   │   ├── infrastructure/                       # Infrastructure layer
+│   │   │   │   ├── infrastructure/                        # Infrastructure layer
 │   │   │   │   │   ├── adapter/                           # Adapters for external interfaces
 │   │   │   │   │   │   ├── api/                           # API adapters
 │   │   │   │   │   │   │   ├── RestAccountController.java
