@@ -51,9 +51,26 @@ demo-microservice/
 │   │   │   │   │   ├── Transaction.java
 │   │   │   │   │   └── ...
 │   │   │   │   │
+│   │   │   │   │
+│   │   │   │   ├── config/                             # Spring boot Configurations
+│   │   │   │   │   ├── CorsConfig.java
+│   │   │   │   │   ├── SecurityConfig.java
+│   │   │   │   │   └── ...
+│   │   │   │   │
+│   │   │   │   ├── controller/                        # Rest api Enpoints 
+│   │   │   │   │   ├── AccountController.java
+│   │   │   │   │   ├── TransactionController.java
+│   │   │   │   │   └── ...
+│   │   │   │   │
 │   │   │   │   ├── repository/                        # Repository interfaces (persistence)
 │   │   │   │   │   ├── AccountRepository.java
 │   │   │   │   │   ├── TransactionRepository.java
+│   │   │   │   │   └── ...
+│   │   │   │   │
+│   │   │   │   │
+│   │   │   │   ├── dto/                                # Data transfer objects  (request and response object)
+│   │   │   │   │   ├── AccountRequestDto.java
+│   │   │   │   │   ├── AccountResponseDto.java
 │   │   │   │   │   └── ...
 │   │   │   │   │
 │   │   │   │   ├── service/                           # Service interfaces (business logic)
@@ -88,6 +105,8 @@ demo-microservice/
 ├── config/                  # Configuration files (e.g., Spring Boot, AWS)
 │   ├── application.yml
 │   └── aws-config.yml
-
+│
+│
+└── ...
 
 ```
