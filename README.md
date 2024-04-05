@@ -57,10 +57,12 @@ demo-microservice/
 │   │   │   │   │   ├── SecurityConfig.java
 │   │   │   │   │   └── ...
 │   │   │   │   │
+│   │   │   │   │
 │   │   │   │   ├── controller/                        # Rest api Enpoints 
 │   │   │   │   │   ├── AccountController.java
 │   │   │   │   │   ├── TransactionController.java
 │   │   │   │   │   └── ...
+│   │   │   │   │
 │   │   │   │   │
 │   │   │   │   ├── repository/                        # Repository interfaces (persistence)
 │   │   │   │   │   ├── AccountRepository.java
@@ -68,41 +70,42 @@ demo-microservice/
 │   │   │   │   │   └── ...
 │   │   │   │   │
 │   │   │   │   │
-│   │   │   │   ├── dto/                                # Data transfer objects  (request and response object)
+│   │   │   │   ├── dto/                               # Data transfer objects  (request and response object)
 │   │   │   │   │   ├── AccountRequestDto.java
 │   │   │   │   │   ├── AccountResponseDto.java
 │   │   │   │   │   └── ...
+│   │   │   │   │
 │   │   │   │   │
 │   │   │   │   ├── service/                           # Service interfaces (business logic)
 │   │   │   │   │   ├── AccountService.java
 │   │   │   │   │   ├── TransactionService.java
 │   │   │   │   │   └── ...
 │   │   │   │   │
+│   │   │   │   │
 │   │   │   │   ├── exception/                         # Exception handling
 │   │   │   │   │   ├── ApiExceptionHandler.java
 │   │   │   │   │   └── ...
-│   │   │   │   │
 │   │   │   │   │
 │   │   │   │   │
 │   │   │   │   └── ...
 │   │   │   │
 │   │   │   └── ...
 │   │   │
-│   │   └── resources/                                     # Resource files (e.g., application properties)
+│   │   └── resources/                                  # Resource files (e.g., application properties)
 │   │       ├── application.properties
 │   │       └── ...
 │   │
-│   └── test/                                                # Test sources
+│   └── test/                                           # Test sources
 │       └── java/
-│           └── com.example.gmoney/
+│           └── com.gmfs.demo/
 │               └── ...
 │
-├── Dockerfile                                              # Dockerfile for containerization
-├── docker-compose.yml                                      # Docker Compose file for local development
+├── Dockerfile                                          # Dockerfile for containerization
+├── docker-compose.yml                                  # Docker Compose file for local development
 └── ...
 │
 │
-├── config/                  # Configuration files (e.g., Spring Boot, AWS)
+├── config/                                             # Configuration files (e.g., Spring Boot, AWS)
 │   ├── application.yml
 │   └── aws-config.yml
 │
