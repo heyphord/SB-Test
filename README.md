@@ -34,3 +34,82 @@ Resilience4J SPRING CLOUD CIRCUIT BREAKER
 Spring Cloud Circuit breaker with Resilience4j as the underlying implementation.
 
 # PROJECT FOLDER STRUCTURE
+
+demo-microservice/
+│
+│
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   ├── com.gmfs.demo/
+│   │   │   │   ├── DemoApplication.java   # Main Spring Boot application class
+│   │   │   │   │   
+│   │   │   │   │
+│   │   │   │   ├── model/                             # Domain models/entities
+│   │   │   │   │   ├── Account.java
+│   │   │   │   │   ├── Transaction.java
+│   │   │   │   │   └── ...
+│   │   │   │   │
+│   │   │   │   ├── repository/                        # Repository interfaces (persistence)
+│   │   │   │   │   ├── AccountRepository.java
+│   │   │   │   │   ├── TransactionRepository.java
+│   │   │   │   │   └── ...
+│   │   │   │   │
+│   │   │   │   ├── service/                           # Service interfaces (business logic)
+│   │   │   │   │   ├── AccountService.java
+│   │   │   │   │   ├── TransactionService.java
+│   │   │   │   │   └── ...
+│   │   │   │   │
+│   │   │   │   ├── exception/                         # Exception handling
+│   │   │   │   │   ├── ApiExceptionHandler.java
+│   │   │   │   │   └── ...
+│   │   │   │   │
+│   │   │   │   │
+│   │   │   │   │
+│   │   │   │   └── ...
+│   │   │   │   │
+│   │   │   │   ├── infrastructure/                       # Infrastructure layer
+│   │   │   │   │   ├── adapter/                           # Adapters for external interfaces
+│   │   │   │   │   │   ├── api/                           # API adapters
+│   │   │   │   │   │   │   ├── RestAccountController.java
+│   │   │   │   │   │   │   ├── RestTransactionController.java
+│   │   │   │   │   │   │   └── ...
+│   │   │   │   │   │   │
+│   │   │   │   │   │   ├── persistence/                   # Persistence adapters
+│   │   │   │   │   │   │   ├── JpaAccountRepository.java
+│   │   │   │   │   │   │   ├── JpaTransactionRepository.java
+│   │   │   │   │   │   │   └── ...
+│   │   │   │   │   │   │
+│   │   │   │   │   │   └── ...
+│   │   │   │   │   │
+│   │   │   │   │   ├── config/                            # Configuration classes
+│   │   │   │   │   │   ├── AwsConfig.java
+│   │   │   │   │   │   └── ...
+│   │   │   │   │   │
+│   │   │   │   │   ├── exception/                         # Exception handling
+│   │   │   │   │   │   ├── ApiExceptionHandler.java
+│   │   │   │   │   │   └── ...
+│   │   │   │   │   │
+│   │   │   │   │   └── ...
+│   │   │   │   │
+│   │   │   │   └── ...
+│   │   │   │
+│   │   │   └── ...
+│   │   │
+│   │   └── resources/                                     # Resource files (e.g., application properties)
+│   │       ├── application.properties
+│   │       └── ...
+│   │
+│   └── test/                                                # Test sources
+│       └── java/
+│           └── com.example.gmoney/
+│               └── ...
+│
+├── Dockerfile                                              # Dockerfile for containerization
+├── docker-compose.yml                                      # Docker Compose file for local development
+└── ...
+│
+│
+├── config/                  # Configuration files (e.g., Spring Boot, AWS)
+│   ├── application.yml
+│   └── aws-config.yml
