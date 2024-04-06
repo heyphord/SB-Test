@@ -110,12 +110,12 @@ Guide to how apis will designed for consistency accross microservices.
 
 https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design
 
-#### Versioning 
+### Versioning 
 Versioning in URL: /api/{version}/resource
 Example: /api/v1/users
 
 
-#### Endpoint urls:
+### Endpoint urls:
 
 Endpoint naming convention: /api/{version}/resource/{id}/resource
 Endpoint naming convention: /api/{version}/resource/{id}
@@ -132,7 +132,7 @@ Example 3: /api/v1/customers
 The preceding url can be used to fetch all customers or add a new customer depending on the HTTP method. See next section on HTTP methods.
 
 
-#### HTTP methods
+### HTTP methods
 
 - GET retrieves a representation of the resource at the specified URI. The body of the response message contains the details of the requested resource.
 
@@ -142,7 +142,7 @@ The preceding url can be used to fetch all customers or add a new customer depen
 
 - DELETE removes the resource at the specified URI.
 
-#### Request and Response Format
+### Request and Response Format
 Use JSON Schema for defining request and response structures. Use the appropriate HTTP status codes for each api response https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
 - Request format: This will depend on the input for the endpoint. Make sure you declare a Request DTO for the api request in the src/main/java/com/gmfs/demo/dto folder
 
