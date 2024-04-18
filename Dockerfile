@@ -21,7 +21,7 @@ FROM openjdk:17-slim
 WORKDIR /app
 
 # Copy the built JAR file from the builder stage
-COPY --from=builder /app/target/demo-0.0.1.jar .
+COPY --from=builder /app/target/demo-1.0.0.jar .
 
 # Expose the port that your Spring Boot application listens on (default is 8080)
 EXPOSE 8080

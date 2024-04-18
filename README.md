@@ -90,19 +90,19 @@ demo-microservice/
 │           └── com.gmfs.demo/
 │               └── ...
 │
-├── buildspec.yaml                                      # AWS Codebuild file for CICD
+├── buildspec.yml                                      # AWS Codebuild file for CICD
 ├── Dockerfile                                          # Dockerfile for containerization
-├── docker-compose.yaml                                  # Docker Compose file for local development
+├── docker-compose.yml                                  # Docker Compose file for local development
 └── ...
 │
 │
 ├── kubernetes/                                         # Kubernetes manifest files 
-│   ├── deployment.yaml
-│   └── service.yaml
+│   ├── deployment.yml
+│   └── service.yml
 │
 ├── config/                                             # Configuration files (e.g., Spring Boot, AWS)
-│   ├── application.yaml
-│   └── aws-config.yaml
+│   ├── application.yml
+│   └── aws-config.yml
 │
 │
 └── ...
