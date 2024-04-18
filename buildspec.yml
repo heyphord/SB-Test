@@ -5,8 +5,7 @@ env:
     CONTAINER_NAME: "demo-microservice"
     TAG: "latest"
     AWS_CLUSTER_NAME: "demo-cluster"
-    REPOSITORY_URL: "$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com"
-
+    REPOSITORY_URL: "339712706100.dkr.ecr.us-east-1.amazonaws.com"
 
 phases:
   install:
@@ -16,7 +15,6 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - echo $REPOSITORY_URL
-      - echo $AWS_ACCOUNT_ID
       - echo $AWS_DEFAULT_REGION
       - aws --version
       # Log in to Amazon ECR using AWS CLI
