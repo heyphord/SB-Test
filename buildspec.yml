@@ -8,14 +8,10 @@ env:
     REPOSITORY_URL: "339712706100.dkr.ecr.us-east-1.amazonaws.com"
 
 phases:
-  install:
-    runtime-versions:
-      java: corretto11
+   
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
-      - echo $REPOSITORY_URL
-      - echo $AWS_DEFAULT_REGION
       - aws --version
       # Log in to Amazon ECR using AWS CLI
       - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $REPOSITORY_URL
