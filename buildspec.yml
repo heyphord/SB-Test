@@ -2,10 +2,10 @@ version: 0.2
 
 env:
   variables:
-    CONTAINER_NAME:"demo-microservice"
-    TAG:"latest"
-    AWS_CLUSTER_NAME="demo-cluster"
-    REPOSITORY_URL="$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com"
+    CONTAINER_NAME: "demo-microservice"
+    TAG: "latest"
+    AWS_CLUSTER_NAME: "demo-cluster"
+    REPOSITORY_URL: "$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com"
 
 
 phases:
