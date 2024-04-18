@@ -1,0 +1,29 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto11
+      docker: 19
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - aws --version
+      # Log in to Amazon ECR using AWS CLI
+      - $(aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
+  build:
+    commands:
+      - echo Building Docker image...
+      # Build Docker image using the Dockerfile in your project
+      - docker build -t your-ecr-repo-url/your-image-name:$CODEBUILD_RESOLVED_SOURCE_VERSION .
+      # Push the Docker image to Amazon ECR
+      - docker push your-ecr-repo-url/your-image-name:$CODEBUILD_RESOLVED_SOURCE_VERSION
+  post_build:
+    commands:
+      - echo Deploying to AWS EKS...
+      # Set the kubeconfig file (ensure your build environment has access to the kubeconfig)
+      - export KUBECONFIG=$CODEBUILD_SRC_DIR/path/to/your/kubeconfig
+      # Apply Kubernetes manifests (deployment, service, etc.) using kubectl
+      - kubectl apply -f $CODEBUILD_SRC_DIR/path/to/your/kubernetes/manifests/deployment.yaml -n your-namespace
+      - kubectl apply -f $CODEBUILD_SRC_DIR/path/to/your/kubernetes/manifests/service.yaml -n your-namespace
+      # Add more commands as needed for other Kubernetes manifests (e.g., ConfigMap, Ingress)
