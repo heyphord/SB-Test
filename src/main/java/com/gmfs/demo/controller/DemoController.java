@@ -22,7 +22,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class DemoController {
 
 
+    @RequestMapping(path = "/", method = RequestMethod.GET)
+    public ResponseEntity<Object> demo4() {
 
+
+        return new ResponseEntity<>("Testing v1", HttpStatus.OK);
+    }
     /**
      * Demo controller with path variable
      */
