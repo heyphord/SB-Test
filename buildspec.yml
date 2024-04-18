@@ -31,7 +31,7 @@ phases:
       - aws sts get-caller-identity
 
       # Apply Kubernetes manifests (deployment, service, etc.) using kubectl
-      - kubectl apply -f $CODEBUILD_SRC_DIR/kubernetes/deployment.yml -n your-namespace
+      - kubectl apply -f $CODEBUILD_SRC_DIR/kubernetes/deployment.yml
       # Add more commands as needed for other Kubernetes manifests (e.g., ConfigMap, Ingress)
       - kubectl get pods
       - kubectl get svc
