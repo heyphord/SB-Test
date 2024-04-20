@@ -30,6 +30,9 @@ phases:
       - aws eks --region $AWS_DEFAULT_REGION update-kubeconfig --name $AWS_CLUSTER_NAME
       - aws sts get-caller-identity
 
+      - echo Create Docker login secret on EKS...
+      - kubectl create secret docker-registry aws-ecr-credentials --docker-server=$REPOSITORY_URL --docker-username=AWS --docker-password="$(aws ecr get-login-password --region $AWS_DEFAULT_REGION)"
+
       # Apply Kubernetes manifests (deployment, service, etc.) using kubectl
       - kubectl apply -f $CODEBUILD_SRC_DIR/kubernetes/deployment.yml -n default
       # Add more commands as needed for other Kubernetes manifests (e.g., ConfigMap, Ingress)
