@@ -30,7 +30,5 @@ EXPOSE 8080
 CMD ["java", "-jar", "demo-0.0.1.jar"]
 
 #build command
-#docker build -t demo:v1 .
+#docker build --platform linux/amd64 -t demo-microservice .
 
-#run command
-#docker run -d -p<HOST_PORT>:8080 <CUSTOM_CONTAINER_NAME> demo:v1
