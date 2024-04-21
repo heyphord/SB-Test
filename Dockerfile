@@ -27,7 +27,7 @@ COPY --from=builder /app/target/demo-1.0.0.jar .
 EXPOSE 8080
 
 # Set the command to run your application
-CMD ["java", "-jar", "demo-0.0.1.jar"]
+CMD ["java", "-jar", "demo-1.0.0.jar"]
 
 #build command
 #docker build --platform linux/amd64 -t demo-microservice .
