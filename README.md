@@ -111,7 +111,7 @@ demo-microservice/
 
 ## REST API GUIDELINES
 
-Guide to how apis will designed for consistency accross microservices.
+Guide on how apis will be designed for consistency accross microservices.
 
 https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design
 
